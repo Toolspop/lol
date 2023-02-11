@@ -145,12 +145,12 @@ local Tab = Window:NewTab("новые функции")
 local Section = Tab:NewSection("топ!")
 
 Section:NewButton("фарм монет", "ы", function()
-for i =  1, 10 do
-wait(1)
+for i =  1, 20 do
+wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.59335327148438, 6.40556001663208, 100.56067657470703)
-wait(1)
+wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(167.5731201171875, 6.405562400817871, 47.92317199707031)
-wait(0.2)
+wait(0.1)
 end
 end)
 
