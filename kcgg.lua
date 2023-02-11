@@ -18,7 +18,7 @@ local Window = Rayfield:CreateWindow({
         Subtitle = "Key System",
         Note = "https://discord.gg/   cQXjH8dkzu",
         FileName = "BPHkey",
-        SaveKey = true,
+        SaveKey = false,
         GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
         Key = "nae_top"
     }
