@@ -3,11 +3,14 @@ local Window = Library.CreateLib("КСГ СКРИПТ ХЕРОвый", "RJTheme1
 local Tab = Window:NewTab("teleports")
 local Section = Tab:NewSection("мой дс: лантисор")
 Section:NewLabel("телепортв:") 
+Section:NewButton("тп в в комнату грузинов", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(66.57464599609375, 8.114665985107422, -77.91995239257812)
+end)
 Section:NewButton("тп в комнату командира", "тп", function()
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14.4494781, 12.2207336, 170.572754, -0.707313538, -0.00645517558, -0.706870973, -0.06160447, 0.996716797, 0.0525409542, 0.704211056, 0.0807093158, -0.705388904)
 end)
 Section:NewButton("тп в комнату света", "тп", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.2837524, 12.3865843, 299.943085, 0.939700544, -0, -0.341998369, 0, 1, -0, 0.341998369, 0, 0.939700544)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7.892894744873047, 1.8653895854949951, 217.45826721191406)
 end)
 Section:NewButton("тп в комнату офицера", "тп", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-34.7864494, 14.3801413, 155.667755, 0.90629667, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, 0.90629667)
@@ -15,6 +18,14 @@ end)
 Section:NewButton("тп в kit kat room", "ButtonInfo", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.3059101, 17.7294502, 134.311234, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 end)
+Section:NewButton("тп в чайхан", "тп", function()
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(611.708740234375, 51.8536376953125, 963.6586303710938)
+end)
+Section:NewButton("тп в казик", "тп", function()
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.004730224609375, 8.397608757019043, 266.4113464355469)
+end)
+
+
 local Tab = Window:NewTab("tools")
 local Section = Tab:NewSection("подбор")
 
@@ -81,7 +92,13 @@ end)
 local Tab = Window:NewTab("Tp parts")
 local Section = Tab:NewSection("к себе телепортирует")
 
-
+Section:NewButton("тп клаву к себе", "tp", function()
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'klava' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end)
 Section:NewButton("тп nokia к себе", "ButtonInfo", function()
 for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'nokia' then
