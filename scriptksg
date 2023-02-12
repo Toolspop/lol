@@ -161,8 +161,29 @@ end)
 local Tab = Window:NewTab("новые функции")
 local Section = Tab:NewSection("топ!")
 
-Section:NewButton("фарм монет", "ы", function()
+Section:NewLabel("фарм монеток") 
+Section:NewButton("20 раз", "ы", function()
 for i =  1, 20 do
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.59335327148438, 6.40556001663208, 100.56067657470703)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(167.5731201171875, 6.405562400817871, 47.92317199707031)
+wait(0.1)
+end
+end)
+
+Section:NewButton("200 раз", "ы", function()
+for i =  1, 200 do
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.59335327148438, 6.40556001663208, 100.56067657470703)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(167.5731201171875, 6.405562400817871, 47.92317199707031)
+wait(0.1)
+end
+end)
+
+Section:NewButton("2000 раз", "ы", function()
+for i =  1, 2000 do
 wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.59335327148438, 6.40556001663208, 100.56067657470703)
 wait(0.1)
