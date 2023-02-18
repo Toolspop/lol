@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("КСГ СКРИПТ ХЕРОвый", "RJTheme1")
+local Window = Library.CreateLib("КСГ СКРИПТ ХЕРОвый", "RJTheme2")
 local Tab = Window:NewTab("teleports")
 local Section = Tab:NewSection("мой дс: лантисор")
 Section:NewLabel("телепортв:") 
@@ -62,6 +62,12 @@ end)
 local Tab = Window:NewTab("Разное")
 local Section = Tab:NewSection("мало")
 
+Section:NewButton("убрать темноту", "xd", function()
+game:GetService("Lighting").ClockTime = 0
+game:GetService("Lighting").Brightness = 0.83
+game:GetService("Lighting").FogEnd = 200
+end)
+
 Section:NewButton("ESP", "есп лул", function()
 while wait(0.5) do
     for i, childrik in ipairs(workspace:GetDescendants()) do
@@ -92,48 +98,115 @@ end)
 local Tab = Window:NewTab("Tp parts")
 local Section = Tab:NewSection("к себе телепортирует")
 
-Section:NewButton("тп клаву к себе", "tp", function()
+Section:NewToggle("тп klava", "tp", function(state)
+    if state then
+      
 for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'klava' then
 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game:GetService("Workspace").comp.nokia.CanCollide = false
 end
+end 
+    else
+   for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'klava' then
+v.CFrame = CFrame.new(9.11280537, 1.88139582, 211.374786, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+game:GetService("Workspace").comp.klava.CanCollide = true
 end
+end  
+    end
 end)
-Section:NewButton("тп nokia к себе", "ButtonInfo", function()
+
+
+
+
+Section:NewToggle("тп nokia", "tp", function(state)
+    if state then
+      
 for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'nokia' then
 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game:GetService("Workspace").comp.nokia.CanCollide = false
 end
+end 
+    else
+   for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'nokia' then
+v.CFrame = CFrame.new(14.8334169, 1.83151746, 211.374832, -0.999964952, 0, 0.00837316178, 0, 1, 0, -0.00837316178, 0, -0.999964952)
+game:GetService("Workspace").comp.nokia.CanCollide = true
 end
+end  
+    end
 end)
-Section:NewButton("тп all doors к себе", "tp", function()
+
+
+
+
+
+
+
+
+
+Section:NewToggle("тп кнопку зеленую", "tp", function(state)
+    if state then
+      
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'green' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end 
+    else
+   for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'green' then
+v.CFrame = CFrame.new(120.372231, 15.996069, -45.9785843, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+end  
+    end
+end)
+
+
+
+
+Section:NewToggle("тп кнопку красную", "tp", function(state)
+    if state then
+      
+for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'red' then
+v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game:GetService("Workspace").dveri.gate.green.CanCollide = false
+game:GetService("Workspace").sirena.sirena.green.CanCollide = false
+end
+end 
+    else
+   for i,v in pairs(game:GetDescendants()) do
+if v.Name == 'red' then
+v.CFrame = CFrame.new(120.372231, 17.3298473, -46.9785843, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+end  
+    end
+end)
+
+Section:NewLabel("не дороботанные функции") 
+
+    Section:NewButton("тп all doors к себе", "tp", function()
 for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'door' then
 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 end
 end)
+
+
+
 Section:NewButton("open doors with key card (возьми в руку)", "xd", function()
 for i,v in pairs(game:GetDescendants()) do
 if v.Name == 'prikol' then
 v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 end
+    
 end)
-Section:NewButton("тп кнопку зеленую", "tp", function()
-for i,v in pairs(game:GetDescendants()) do
-if v.Name == 'green' then
-v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-end
-end)
-Section:NewButton("тп кнопку красную", "tp", function()
-for i,v in pairs(game:GetDescendants()) do
-if v.Name == 'red' then
-v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-end
-end)
+
 
 local Tab = Window:NewTab("нищие функции")
 local Section = Tab:NewSection("увы")
@@ -227,6 +300,9 @@ for i,v in pairs(t.Givr) do
 v[1].Color = Color3.new(120,81,169)
 v[1].Transparency = 0
 v[1].Material = "ForceField"
+a = Instance.new("PointLight")
+a.Parent = v[1]
+a.Range = (20)
         v[1].CFrame = CFrame.new(181.88560485839844, 178.16395568847656, -46.989723205566406)
     end
 end
@@ -244,6 +320,10 @@ NewPart.Parent = workspace
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(182.00814819335938, 178.16395568847656, -53.35804748535156)
 
+wait(0.5)
+game:GetService("Lighting").ClockTime = 12
+game:GetService("Lighting").Brightness = 4
+game:GetService("Lighting").FogEnd = 10000000
 
 end)
 local Tab = Window:NewTab("крейдит")
@@ -251,5 +331,6 @@ local Section = Tab:NewSection("лантисор")
 Section:NewLabel("скрипт кал")
 Section:NewLabel("мог и лучше сделать если бы знал луа хорошо")
 Section:NewLabel("но даже эти функции могут испортить игру")
-Section:NewLabel("возможно будет сделан дс сервер")
-Section:NewLabel("ксг хорошая игра , но у разрабов нет времени")
+Section:NewLabel("дс серв https://discord.com/invite/mY7dDnaaEt")
+Section:NewLabel("ксг хорошая игра , но у разрабов нет времени :>")
+Section:NewLabel("PFF = platdom for farm")
