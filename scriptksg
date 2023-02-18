@@ -195,9 +195,45 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-
 end)
 
 local Tab = Window:NewTab("new op farm")
-local Section = Tab:NewSection("фарм монеток ")
+local Section = Tab:NewSection("old farm break if use op farm ")
 Section:NewButton("create PFF", "lolo", function()
-wait(0.2)
+
+t = {
+["Grz"] = {},
+["Givr"] = {}
+}
+for i,v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "gruz" then
+        table.insert(t.Grz,{v,v.Size,v.CFrame,v.Position})
+        else
+        if v.Name == "giver" then
+            table.insert(t.Givr,{v,v.Size,v.CFrame,v.Position})
+        end
+    end
+end
+
+
+for i,v in pairs(t.Grz) do
+    if v[3] == CFrame.new(165.146576, 9.50406647, 48.0624008, 1, 0, 0, 0, 1, 0, 0, 0, 1) then
+v[1].Color = Color3.new(255,169,9)
+v[1].Transparency = 0
+v[1].Material = "ForceField"
+        v[1].CFrame = CFrame.new(181.97052001953125, 178.16395568847656, -58.82463073730469)
+    end
+end
+
+for i,v in pairs(t.Givr) do
+    if v[3] == CFrame.new(196.011154, 6.66773939, 106.731903, 0, 0, -1, -1, 0, 0, 0, 1, 0) then
+v[1].Color = Color3.new(120,81,169)
+v[1].Transparency = 0
+v[1].Material = "ForceField"
+        v[1].CFrame = CFrame.new(181.88560485839844, 178.16395568847656, -46.989723205566406)
+    end
+end
+
+
+
+
 local NewPart = Instance.new("Part")
 NewPart.Position = Vector3.new(174.796, 174.664, -50.9204) --Position of the part
    NewPart.Anchored = true
@@ -205,33 +241,10 @@ NewPart.Position = Vector3.new(174.796, 174.664, -50.9204) --Position of the par
    NewPart.Color = Color3.fromRGB(255,9,9)
    NewPart.Material = "ForceField"
 NewPart.Parent = workspace
-wait(2)
+wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(182.00814819335938, 178.16395568847656, -53.35804748535156)
-wait(1)
 
-for i,v in pairs(game.Workspace:GetChildren()) do
-       if v.Name == "giver" then
-               if v.Size== Vector3.new(6.52435, 11.2759, 11.5989) then
-v.Material = "ForceField"
-v.Color = Color3.fromRGB(255,9,9)
-v.Transparency = 0
-v.CFrame = CFrame.new(183.33709716796875, 178.16395568847656, -42.77250289916992)
-              end
-       end
-end
 
-wait(1)
-
-for i,v in pairs(game.Workspace:GetChildren()) do
-       if v.Name == "gruz" then
-               if v.Size== Vector3.new(20.6177, 12.1971, 3.39834) then
-v.Material = "ForceField"
-v.Color = Color3.fromRGB(255,9,9)
-v.Transparency = 0
-v.CFrame = CFrame.new(182.24208068847656, 178.16395568847656, -54.53114318847656)
-              end
-       end
-end
 end)
 local Tab = Window:NewTab("крейдит")
 local Section = Tab:NewSection("лантисор")
