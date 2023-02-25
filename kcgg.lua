@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "BPHkey",
         SaveKey = false,
         GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-        Key = "delete_children_a0b81kg8xz05kAf853"
+        Key = "2_grivni"
     }
 })
  --- Local ---
